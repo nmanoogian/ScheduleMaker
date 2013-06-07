@@ -1,6 +1,7 @@
 /**
  * Employee Class
  * Represents an employee
+ * @author Nic Manoogian
  */
 
 import java.util.ArrayList;
