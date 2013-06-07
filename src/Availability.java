@@ -13,11 +13,11 @@ public class Availability
      * @param s shift in question
      * @return boolean true if there is a conflict
      */
-    public boolean overlaps(Shift s)
+    public boolean conflictsWith(Shift s)
     {
         for (DayAvailability d : days)
         {
-            if (d.overlaps(s))
+            if (d.conflictsWith(s))
             {
                 return true;
             }

@@ -41,6 +41,27 @@ public class Employee
      */
     public boolean canWork(Shift s)
     {
+        // Availability
+        if (avail.conflictsWith(s))
+        {
+            return false;
+        }
 
+        // Rank
+        if (!supervisor && s.isSupervisor())
+        {
+            return false;
+        }
+
+        // Working another shift at the same time
+        for (Shift w : workingShifts)
+        {
+            if (w.conflictsWith(s))
+            {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }

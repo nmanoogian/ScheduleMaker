@@ -27,7 +27,7 @@ public class DayAvailability
      * @param s shift in question
      * @return boolean true if the shift causes a conflict
      */
-    public boolean overlaps(Shift s)
+    public boolean conflictsWith(Shift s)
     {
         return s.getStartTime().before(startTime) || s.getEndTime.after(endTime);
     }
