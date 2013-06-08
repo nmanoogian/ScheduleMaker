@@ -73,4 +73,9 @@ public class Shift
     {
         return endTime;
     }
+
+    public Shift clone()
+    {
+        return new Shift(type, supervisor, startTime, endTime);
+    }
 }

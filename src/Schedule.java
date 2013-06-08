@@ -14,6 +14,45 @@ public class Schedule
     private ArrayList<Employee> employees;
 
     /**
+     * Default constructor creates the empty ArrayLists
+     */
+    public Schedule()
+    {
+        shifts = new ArrayList<Shift>();
+        employees = new ArrayList<Employee>();
+    }
+    
+    /**
+     * Constructs a Schedule using another Schedule
+     * @param os other Schedule
+     */
+    public Schedule(Schedule os)
+    {
+        shifts = new ArrayList<Shift>();
+        employees = new ArrayList<Employee>();
+
+        for (Shift sh : os.getShifts())
+        {
+            shifts.add(sh.clone());
+        }
+        
+        for (Employee ee : os.getEmployees())
+        {
+            employees.add(ee.clone());
+        }
+    }
+
+    /**
+     * Constructs an "empty" schedule using a list of shifts to be covered and a list of employees
+     * @param shiftsFile file containing shifts
+     * @param employeesFile file containing shifts
+     */
+    public Schedule(String shiftsFile, String employeesFile)
+    {
+        // Read file
+    }
+
+    /**
      * Determines if this configuration is the goal
      * @return if there are no shifts to be covered
      */
@@ -41,5 +80,15 @@ public class Schedule
         }
 
         return neighborList;
+    }
+
+    public ArrayList<Employee> getEmployees()
+    {
+        return employees;
+    }
+
+    public ArrayList<Shift> getShifts()
+    {
+        return shifts;
     }
 }

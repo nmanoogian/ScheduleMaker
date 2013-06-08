@@ -29,4 +29,13 @@ public class DayAvailability
     {
         return s.getStartTime().before(startTime) || s.getEndTime().after(endTime);
     }
+
+    /**
+     * Makes a copy of the DayAvailability
+     * @return copy
+     */
+    public DayAvailability clone()
+    {
+        return new DayAvailability(startTime.clone(), endTime.clone());
+    }
 }

@@ -32,6 +32,51 @@ public class Employee
         this.phoneNumber = phone;
         this.supervisor = su;
         this.avail = a;
+        this.workingShifts = new ArrayList<Shift>();
+    }
+
+    public Employee(Employee ee)
+    {
+        this.name = ee.getName();
+        this.phoneNumber = ee.getPhone();
+        this.supervisor = ee.getRank();
+        this.avail = ee.getAvailability().clone();
+
+        this.workingShifts = new ArrayList<Shift>();
+        for (Shift sh : ee.getShifts())
+        {
+            this.workingShifts.add(sh.clone());
+        }
+    } 
+
+    public Employee clone()
+    {
+        return new Employee(this);
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getPhone()
+    {
+        return phoneNumber;
+    }
+
+    public boolean getRank()
+    {
+        return supervisor;
+    }
+
+    public Availability getAvailability()
+    {
+        return avail;
+    }
+
+    public ArrayList<Shift> getShifts()
+    {
+        return workingShifts;
     }
 
     /**

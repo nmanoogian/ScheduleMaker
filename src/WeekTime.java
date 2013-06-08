@@ -102,4 +102,9 @@ public class WeekTime
         out += ", " + hour + ":" + (minute <= 9 ? "0"+minute : minute);
         return out;
     }
+    
+    public WeekTime clone()
+    {
+        return new WeekTime(week, hour, minute);
+    }
 }
