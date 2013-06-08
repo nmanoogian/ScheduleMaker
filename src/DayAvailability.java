@@ -4,19 +4,17 @@
  * @author Nic Manoogian
  */
 
-import java.util.Date;
-
 public class DayAvailability
 {
     // time that the employee can begin work on the given day
-    private Date startTime;
+    private WeekTime startTime;
     // time that the employee can end work on the given day
-    private Date endTime;
+    private WeekTime endTime;
 
     /**
      * Constructs an employee availability with start and end times
      */
-    public DayAvailability(Date t1, Date t2)
+    public DayAvailability(WeekTime t1, WeekTime t2)
     {
         this.startTime = t1;
         this.endTime = t2;

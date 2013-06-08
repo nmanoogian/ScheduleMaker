@@ -3,8 +3,6 @@
  * Represents a single shift
  */
 
-import java.util.Date;
-
 public class Shift
 {
     // Type of Shift
@@ -12,9 +10,9 @@ public class Shift
     // Rank
     private boolean supervisor;
     // Start time
-    private Date startTime;
+    private WeekTime startTime;
     // End time
-    private Date endTime;
+    private WeekTime endTime;
 
     /**
      * Constructs a shift
@@ -23,7 +21,7 @@ public class Shift
      * @param t1 start time
      * @param t2 end time
      */
-    public Shift(String t, boolean s, Date t1, Date t2)
+    public Shift(String t, boolean s, WeekTime t1, WeekTime t2)
     {
         this.type = t;
         this.supervisor = s;
@@ -49,7 +47,7 @@ public class Shift
      * Gets the start time
      * @return start time
      */
-    public Date getStartTime()
+    public WeekTime getStartTime()
     {
         return startTime;
     }
@@ -58,7 +56,7 @@ public class Shift
      * Gets the end time
      * @return end time
      */
-    public Date getStartTime()
+    public WeekTime getStartTime()
     {
         return endTime;
     }
