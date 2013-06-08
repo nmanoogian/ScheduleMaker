@@ -26,6 +26,18 @@ public class Availability
         days[6] = original[6].clone();
     }
 
+    public Availability(DayAvailability s0, DayAvailability s1, DayAvailability s2, DayAvailability s3, DayAvailability s4, DayAvailability s5, DayAvailability s6)
+    {
+        days = new DayAvailability[7];
+        days[0] = s0;
+        days[1] = s1;
+        days[2] = s2;
+        days[3] = s3;
+        days[4] = s4;
+        days[5] = s5;
+        days[6] = s6;
+    }
+
     public DayAvailability[] getDays()
     {
         return days;

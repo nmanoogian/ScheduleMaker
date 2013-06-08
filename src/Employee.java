@@ -10,8 +10,6 @@ public class Employee
 {
     // Name of Employee
     private String name;
-    // Telephone number
-    private int phoneNumber;
     // Rank of employee
     private boolean supervisor;
     // Employee availability
@@ -22,14 +20,12 @@ public class Employee
     /**
      * Constructs an employee
      * @param ename employee name
-     * @param phone employee phone number
      * @param su employee rank
      * @param a employee availability
      */
-    public Employee(String ename, int phone, boolean su, Availability a)
+    public Employee(String ename, boolean su, Availability a)
     {
         this.name = ename;
-        this.phoneNumber = phone;
         this.supervisor = su;
         this.avail = a;
         this.workingShifts = new ArrayList<Shift>();
@@ -38,7 +34,6 @@ public class Employee
     public Employee(Employee ee)
     {
         this.name = ee.getName();
-        this.phoneNumber = ee.getPhone();
         this.supervisor = ee.getRank();
         this.avail = ee.getAvailability().clone();
 
@@ -57,11 +52,6 @@ public class Employee
     public String getName()
     {
         return name;
-    }
-
-    public int getPhone()
-    {
-        return phoneNumber;
     }
 
     public boolean getRank()

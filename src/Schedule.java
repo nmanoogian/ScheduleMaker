@@ -5,6 +5,8 @@
  */
 
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
 
 public class Schedule
 {
@@ -49,7 +51,21 @@ public class Schedule
      */
     public Schedule(String shiftsFile, String employeesFile)
     {
-        // Read file
+        Scanner sc = null;
+        try
+        {
+            sc = new Scanner(new File(employeesFile));
+        }
+        catch (java.io.FileNotFoundException e)
+        {
+            System.err.println("File not found");
+            System.exit(1);
+        }
+        while (sc.hasNextLine())
+        {
+            // employees.add(new Employee(sc.readLine(), (sc.readLine().equals("supervisor"), new Availability(new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine)),new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine)),new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine)),new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine)),new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine)),new DayAvailability(new WeekTime(sc.readLine),new WeekTime(sc.readLine))))));
+
+        }
     }
 
     /**
