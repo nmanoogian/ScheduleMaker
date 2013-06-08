@@ -1,4 +1,4 @@
-Kayla Becker
+KaylaBecker
 supervisor
 00000
 02359
@@ -14,7 +14,7 @@ supervisor
 52359
 60000
 62359
-Jimmy Blair
+JimmyBlair
 supervisor
 00000
 02359
@@ -30,7 +30,7 @@ supervisor
 52359
 60000
 62359
-Doug Ellmore
+DougEllmore
 supervisor
 00000
 02359
@@ -46,7 +46,7 @@ supervisor
 52359
 61500
 62359
-Zach Ireland
+ZachIreland
 supervisor
 00000
 02359
@@ -62,7 +62,7 @@ supervisor
 52359
 60000
 62359
-Sharon Lane
+SharonLane
 supervisor
 00000
 02359
@@ -78,7 +78,7 @@ supervisor
 52359
 60000
 62359
-Nic Manoogian
+NicManoogian
 supervisor
 00000
 02359
@@ -94,7 +94,7 @@ supervisor
 52359
 60000
 62359
-James Baker
+JamesBaker
 employee
 01200
 02359
@@ -110,7 +110,7 @@ employee
 52359
 61700
 62359
-David Beall
+DavidBeall
 Employee
 00000
 02359
@@ -126,7 +126,7 @@ Employee
 52359
 60000
 62359
-Michelle Burns
+MichelleBurns
 Employee
 00000
 02359
@@ -142,7 +142,7 @@ Employee
 52359
 60000
 60000
-Brennan Connelly
+BrennanConnelly
 Employee
 01700
 02359
@@ -158,7 +158,7 @@ Employee
 51700
 60000
 61700
-Chad DeVillbiss
+ChadDeVillbiss
 Employee
 00000
 00000
@@ -174,7 +174,7 @@ Employee
 50000
 60000
 60000
-Alex Ellenbogen
+AlexEllenbogen
 Employee
 01500
 02359
@@ -190,7 +190,7 @@ Employee
 50000
 60000
 60000
-Harrison Goetzke
+HarrisonGoetzke
 Employee
 00000
 02359
@@ -206,7 +206,7 @@ Employee
 52359
 60000
 62359
-Braden Grimes
+BradenGrimes
 Employee
 00000
 02359

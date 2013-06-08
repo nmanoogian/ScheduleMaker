@@ -49,6 +49,16 @@ public class Employee
         return new Employee(this);
     }
 
+    public String toString()
+    {
+        String out = name + (supervisor ? "\n Supervisor\n" : "\nEmployee\n");
+        for (Shift s : workingShifts)
+        {
+            out += "\t" + s + "\n";
+        }
+        return out;
+    }
+
     public String getName()
     {
         return name;
@@ -79,12 +89,14 @@ public class Employee
         // Availability
         if (avail.conflictsWith(s))
         {
+            System.out.println("Availability");
             return false;
         }
 
         // Rank
         if (!supervisor && s.isSupervisor())
         {
+            System.out.println("Rank");
             return false;
         }
 
@@ -93,6 +105,7 @@ public class Employee
         {
             if (w.conflictsWith(s))
             {
+                System.out.println("Shift");
                 return false;
             }
         }

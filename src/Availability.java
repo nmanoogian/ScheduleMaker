@@ -50,12 +50,10 @@ public class Availability
      */
     public boolean conflictsWith(Shift s)
     {
-        for (DayAvailability d : days)
+        if (days[s.getWeek()].conflictsWith(s))
         {
-            if (d.conflictsWith(s))
-            {
-                return true;
-            }
+            System.out.println(s);
+            return true;
         }
         return false;
     }

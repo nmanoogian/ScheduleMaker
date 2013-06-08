@@ -38,4 +38,13 @@ public class DayAvailability
     {
         return new DayAvailability(startTime.clone(), endTime.clone());
     }
+
+    /**
+     * String representation of a DayAvailability
+     * @return string representation
+     */
+    public String toString()
+    {
+        return "Available from " + startTime + " to " + endTime;
+    }
 }

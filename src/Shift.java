@@ -74,8 +74,31 @@ public class Shift
         return endTime;
     }
 
+    public int getWeek()
+    {
+        return startTime.getWeek();
+    }
+
     public Shift clone()
     {
         return new Shift(type, supervisor, startTime, endTime);
+    }
+
+    public boolean equals(Object o)
+    {
+        if (o instanceof Shift)
+        {
+            Shift s = (Shift) o;
+            return s.getStartTime().getStamp() == getStartTime().getStamp() && s.getEndTime().getStamp() == getEndTime().getStamp();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public String toString()
+    {
+        return type + " shift from " + startTime + " to " + endTime;
     }
 }
