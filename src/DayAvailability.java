@@ -27,6 +27,6 @@ public class DayAvailability
      */
     public boolean conflictsWith(Shift s)
     {
-        return s.getStartTime().before(startTime) || s.getEndTime.after(endTime);
+        return s.getStartTime().before(startTime) || s.getEndTime().after(endTime);
     }
 }

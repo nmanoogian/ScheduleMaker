@@ -38,9 +38,22 @@ public class Shift
         return supervisor;
     }
 
+    /**
+     * Determines if two Shifts will overlap
+     * @return true if there exists a conflict
+     */
     public boolean conflictsWith(Shift s)
     {
-        // return (startTime.before(s.getStartTime()) && endTime.after(s.getStartTime()));
+        // If shifts start on different days of the week, they will not overlap
+        if (s.getStartTime().getWeek() == startTime.getWeek())
+        {
+            return (startTime.before(s.getEndTime()) && s.getStartTime().before(endTime));
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 
     /**
@@ -56,7 +69,7 @@ public class Shift
      * Gets the end time
      * @return end time
      */
-    public WeekTime getStartTime()
+    public WeekTime getEndTime()
     {
         return endTime;
     }

@@ -64,4 +64,13 @@ public class Employee
         
         return true;
     }
+    
+    /**
+     * Adds a Shift to the Employee Shifts list
+     * @param s Shift to add
+     */
+    public void take(Shift s)
+    {
+        workingShifts.add(s);
+    }
 }

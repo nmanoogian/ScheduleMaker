@@ -33,7 +33,7 @@ public class Schedule
         
         for (Employee e : employees)
         {
-            if (e.canWork(shifts.get(0))
+            if (e.canWork(shifts.get(0)))
             {
                 e.take(shifts.get(0));
                 shifts.remove(0);
@@ -41,4 +41,5 @@ public class Schedule
         }
 
         return neighborList;
+    }
 }

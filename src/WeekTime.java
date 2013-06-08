@@ -33,7 +33,7 @@ public class WeekTime
     {
         this.week = Integer.parseInt(s.substring(0,1));
         this.hour = Integer.parseInt(s.substring(1,3));
-        this.minute = Integer.parseInt(s.substrin(3,5));
+        this.minute = Integer.parseInt(s.substring(3,5));
     }
 
     /**
@@ -60,6 +60,46 @@ public class WeekTime
      */
     public int getStamp()
     {
-        return (10000 * week) + (100 * day) + minute;
+        return (10000 * week) + (100 * hour) + minute;
+    }
+
+    /**
+     * Returns the week as an integer
+     * @return week as an integer
+     */
+    public int getWeek()
+    {
+        return week;
+    }
+
+    public String toString()
+    {
+        String out = "";
+        switch (week)
+        {
+            case 0:
+                out += "Friday";
+                break;
+            case 1:
+                out += "Saturday";
+                break;
+            case 2:
+                out += "Sunday";
+                break;
+            case 3:
+                out += "Monday";
+                break;
+            case 4:
+                out += "Tuesday";
+                break;
+            case 5:
+                out += "Wednesday";
+                break;
+            case 6:
+                out += "Thursday";
+                break;
+        }
+        out += ", " + hour + ":" + (minute <= 9 ? "0"+minute : minute);
+        return out;
     }
 }
