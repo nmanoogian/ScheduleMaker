@@ -181,8 +181,8 @@ public class Schedule
         {
             out += ee + "\n";
         }
-        out += shifts.size() + " unassigned shifts";
-        out += "Is goal?: " + isGoal();
+        out += shifts.size() + " unassigned shifts\n";
+        out += "Is goal?: " + isGoal() + "\n";
         return out;
     }
 }
