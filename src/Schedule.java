@@ -176,12 +176,13 @@ public class Schedule
 
     public String toString()
     {
-        String out = "";
+        String out = super.toString() + "-------------------\n";
         for (Employee ee : employees)
         {
             out += ee + "\n";
         }
         out += shifts.size() + " unassigned shifts";
+        out += "Is goal?: " + isGoal();
         return out;
     }
 }

@@ -29,11 +29,11 @@ public class ScheduleMaker
     public static void main(String[] args)
     {
         Schedule s = new Schedule("data/shifts.txt","data/employees.txt");
-        Schedule finished = backtrack(s);
-        if (finished == null)
-        {
-            System.out.println("No solution found");
-        }
-        System.out.println(finished);
+        // Schedule finished = backtrack(s);
+        // if (finished == null)
+        // {
+        //     System.out.println("No solution found");
+        // }
+        System.out.println(s.getNeighbors());
     }
 }
