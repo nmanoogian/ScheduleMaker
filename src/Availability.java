@@ -56,7 +56,6 @@ public class Availability
     {
         if (days[s.getWeek()].conflictsWith(s))
         {
-            System.out.println(s);
             return true;
         }
         return false;

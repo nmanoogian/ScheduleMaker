@@ -116,6 +116,6 @@ public class Shift
      */
     public String toString()
     {
-        return type + " shift from " + startTime + " to " + endTime;
+        return super.toString() + ": " + type + " shift from " + startTime + " to " + endTime;
     }
 }

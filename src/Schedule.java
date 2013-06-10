@@ -35,6 +35,7 @@ public class Schedule
         employees = new ArrayList<Employee>();
         Shift taken = null;
 
+        // Load all Shifts but the given one
         for (Shift sh : os.getShifts())
         {
             // Don't add the taken shift
@@ -44,21 +45,29 @@ public class Schedule
             }
             else
             {
-                taken = sh;
-                System.out.println("Found taken*****");
+                taken = sh.clone();
             }
         }
         
+        // Load all Employees and assign the given Employee the given Shift
         for (Employee ee : os.getEmployees())
         {
-            employees.add(ee.clone());
+            // Make a new Employee
+            Employee newEmployee = ee.clone();
+            // If it is the target, take the Shift
             if (ee.getName() == e.getName())
             {
-                ee.take(taken);
+                newEmployee.take(taken);
             }
+            // Add the new Employee to the list
+            employees.add(newEmployee);
         }
     }
 
+    /**
+     * Constructs a Schedule by copying another Schedule
+     * @param os other Schedule
+     */
     public Schedule(Schedule os)
     {
         shifts = new ArrayList<Shift>();
@@ -146,34 +155,45 @@ public class Schedule
     public ArrayList<Schedule> getNeighbors()
     {
         ArrayList<Schedule> neighborList = new ArrayList<Schedule>();
-        
+       
+        // Go through the list of employees 
         for (Employee e : employees)
         { 
+            // If the employee can work the first shift in the list
             if (e.canWork(shifts.get(0)))
             {
+                // Make a new Schedule without the given shift, where the given employee has that shift
                 Schedule newSchedule = new Schedule(this, e, shifts.get(0));
-                System.out.println(newSchedule);
+                // Add that shift to the neighborList
                 neighborList.add(newSchedule);
-            }
-            else
-            {
-                System.out.println(e + " cannot work the shift");
             }
         }
 
         return neighborList;
     }
 
+    /**
+     * Gets the list of Employees
+     * @return ArrayList of Employee objects
+     */
     public ArrayList<Employee> getEmployees()
     {
         return employees;
     }
 
+    /**
+     * Gets the list of Shifts
+     * @return ArrayList of Shifts
+     */
     public ArrayList<Shift> getShifts()
     {
         return shifts;
     }
 
+    /**
+     * Gets a String representation for a Schedule
+     * @return String representation of the Schedule
+     */
     public String toString()
     {
         String out = super.toString() + "-------------------\n";

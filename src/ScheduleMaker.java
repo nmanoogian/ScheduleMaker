@@ -17,8 +17,7 @@ public class ScheduleMaker
         {
             for (Schedule child : s.getNeighbors())
             {
-                System.out.println(child);
-                backtrack(new Schedule(child));
+                return backtrack(new Schedule(child));
             }
         }
 
@@ -29,11 +28,11 @@ public class ScheduleMaker
     public static void main(String[] args)
     {
         Schedule s = new Schedule("data/shifts.txt","data/employees.txt");
-        // Schedule finished = backtrack(s);
-        // if (finished == null)
-        // {
-        //     System.out.println("No solution found");
-        // }
-        System.out.println(s.getNeighbors());
+        Schedule finished = backtrack(s);
+        if (finished == null)
+        {
+            System.out.println("No solution found");
+        }
+        System.out.println(finished);
     }
 }
