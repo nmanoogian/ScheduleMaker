@@ -13,6 +13,10 @@ public class Availability
         days = new DayAvailability[7];
     }
 
+    /**
+     * Constructs an Availability based on another Availability
+     * @param aa Availability to copy
+     */
     public Availability(Availability aa)
     {
         days = new DayAvailability[7];

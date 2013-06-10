@@ -31,6 +31,10 @@ public class Employee
         this.workingShifts = new ArrayList<Shift>();
     }
 
+    /**
+     * Constructs an employee using another employee
+     * @param ee Employee to copy
+     */
     public Employee(Employee ee)
     {
         this.name = ee.getName();
@@ -59,21 +63,37 @@ public class Employee
         return out;
     }
 
+    /**
+     * Gets the name of the Employee
+     * @return name of employee
+     */
     public String getName()
     {
         return name;
     }
 
+    /**
+     * Gets the rank of the Employee
+     * @return boolean true if supervisor
+     */
     public boolean getRank()
     {
         return supervisor;
     }
 
+    /**
+     * Gets the Availability of the Employee
+     * @return Availability object for the employee
+     */
     public Availability getAvailability()
     {
         return avail;
     }
 
+    /**
+     * Gets the ArrayList of shift that the Employee is assigned to work
+     * @return ArrayList of Shift objects
+     */
     public ArrayList<Shift> getShifts()
     {
         return workingShifts;
@@ -119,6 +139,6 @@ public class Employee
      */
     public void take(Shift s)
     {
-        workingShifts.add(s);
+        workingShifts.add(s.clone());
     }
 }

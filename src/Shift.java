@@ -74,16 +74,29 @@ public class Shift
         return endTime;
     }
 
+    /**
+     * Gets the weekday for the shift
+     * @return weekday integer (0-6)
+     */
     public int getWeek()
     {
         return startTime.getWeek();
     }
 
+    /**
+     * Gets a copy of the shift
+     * @return new Shift copy
+     */
     public Shift clone()
     {
-        return new Shift(type, supervisor, startTime, endTime);
+        return new Shift(type, supervisor, startTime.clone(), endTime.clone());
     }
 
+    /**
+     * Determines if the Object is the same as the given object
+     * @param o other Object to compare
+     * @return boolean true of the Object is the same as the given object
+     */
     public boolean equals(Object o)
     {
         if (o instanceof Shift)
@@ -97,6 +110,10 @@ public class Shift
         }
     }
 
+    /**
+     * Gets the String representation for the Shift
+     * @return String representation
+     */
     public String toString()
     {
         return type + " shift from " + startTime + " to " + endTime;
