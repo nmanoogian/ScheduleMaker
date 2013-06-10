@@ -6,6 +6,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 import java.io.File;
 
 public class Schedule
@@ -155,6 +156,8 @@ public class Schedule
     public ArrayList<Schedule> getNeighbors()
     {
         ArrayList<Schedule> neighborList = new ArrayList<Schedule>();
+
+        Collections.shuffle(employees);
        
         // Go through the list of employees 
         for (Employee e : employees)
