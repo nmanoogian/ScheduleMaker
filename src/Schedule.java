@@ -146,6 +146,8 @@ public class Schedule
     public boolean isGoal()
     {
         return shifts.size() == 0;
+        // TODO Each employee has one shift
+        // TODO Other factors
     }
 
     /**
@@ -158,6 +160,7 @@ public class Schedule
         ArrayList<Schedule> neighborList = new ArrayList<Schedule>();
 
         Collections.shuffle(employees);
+        // TODO Sort by amount of availability rather than shuffle
        
         // Go through the list of employees 
         for (Employee e : employees)

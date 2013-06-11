@@ -5,7 +5,6 @@ Generates a work schedule using employee availability and work shifts
 
 Employee: Class
     - name [String]
-    - phoneNumber [int]
     - supervisor [boolean]
     - avail [Availability]
     - workingShifts [ArrayList<Shift>]
